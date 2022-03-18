@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>icu.easyj</groupId>
+		<artifactId>easyj-build</artifactId>
+		<version>1.0.41</version>
+		<relativePath/>
+	</parent>
+
+	<groupId>icu.easyj.framework</groupId>
+	<artifactId>easyj-framework-project</artifactId>
+	<version>${revision}</version>
+	<packaging>pom</packaging>
+
+	<name>${project.groupId}:${project.version}</name>
+
+	<url>https://easyj.icu</url>
+
+	<inceptionYear>2022</inceptionYear>
+
+	<organization>
+		<name>EasyJ开源社区</name>
+		<url>https://gitee.com/easyj-projects</url>
+	</organization>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>wangliang181230</id>
+			<name>王良</name>
+			<email>841369634@qq.com</email>
+			<url>https://gitee.com/wangliang181230</url>
+			<organization>浙江蕙康科技有限公司</organization>
+			<organizationUrl>https://www.jyhk.com</organizationUrl>
+			<roles>
+				<role>Java架构师</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<modules>
+		<module>dependencies</module>
+		<module>parent</module>
+		<module>test</module>
+	</modules>
+
+	<scm>
+		<connection>scm:git@gitee.com:easyj-projects/easyj-framework.git</connection>
+		<developerConnection>scm:git@gitee.com:easyj-projects/easyj-framework.git</developerConnection>
+		<url>https://gitee.com/easyj-projects/easyj-framework</url>
+	</scm>
+
+	<issueManagement>
+		<system>gitee</system>
+		<url>https://gitee.com/easyj-projects/easyj-framework/issues</url>
+	</issueManagement>
+
+	<properties>
+		<!-- 当前项目版本 -->
+		<revision>0.0.1-SNAPSHOT</revision>
+
+		<!-- 编译配置 -->
+		<java.version>1.8</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<!-- 使用插件：Flatten -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<configuration>
+					<flattenMode>resolveCiFriendliesOnly</flattenMode>
+				</configuration>
+			</plugin>
+			<!-- 使用插件：Source -->
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

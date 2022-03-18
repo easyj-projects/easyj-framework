@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>icu.easyj.framework</groupId>
+		<artifactId>easyj-framework-dependencies</artifactId>
+		<version>${revision}</version>
+		<relativePath>../dependencies/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>easyj-framework-parent</artifactId>
+	<packaging>pom</packaging>
+
+	<name>${project.groupId}:${project.version}</name>
+
+	<dependencies>
+		<!-- 引用依赖：Tests -->
+		<dependency>
+			<groupId>icu.easyj.boot</groupId>
+			<artifactId>easyj-spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- 使用插件：Compiler -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<!-- 使用插件：Resources -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+			</plugin>
+			<!-- 使用插件：Source -->
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<!-- Profile: dev -->
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault><!-- 默认使用dev -->
+			</activation>
+		</profile>
+	</profiles>
+</project>
