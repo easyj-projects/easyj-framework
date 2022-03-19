@@ -13,4 +13,8 @@
 	<packaging>pom</packaging>
 
 	<name>${project.groupId}:${project.version}</name>
+
+	<properties>
+		<maven.deploy.skip>true</maven.deploy.skip>
+	</properties>
 </project>
