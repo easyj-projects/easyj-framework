@@ -12,8 +12,6 @@
 	<artifactId>easyj-framework-parent</artifactId>
 	<packaging>pom</packaging>
 
-	<name>${project.groupId}:${project.version}</name>
-
 	<dependencies>
 		<!-- 引用依赖：Tests -->
 		<dependency>

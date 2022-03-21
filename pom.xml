@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>icu.easyj</groupId>
 		<artifactId>easyj-build</artifactId>
-		<version>1.0.41</version>
+		<version>1.0.42</version>
 		<relativePath/>
 	</parent>
 
@@ -13,8 +13,6 @@
 	<artifactId>easyj-framework-project</artifactId>
 	<version>${revision}</version>
 	<packaging>pom</packaging>
-
-	<name>${project.groupId}:${project.version}</name>
 
 	<url>https://easyj.icu</url>
 

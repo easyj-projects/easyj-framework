@@ -11,13 +11,11 @@
 	<artifactId>easyj-framework-dependencies</artifactId>
 	<packaging>pom</packaging>
 
-	<name>${project.groupId}:${project.version}</name>
-
 	<properties>
 		<!-- *************** 基础框架 *************** -->
 
 		<!-- EasyJ版本 -->
-		<easyj.version>0.3.4</easyj.version>
+		<easyj.version>0.3.5</easyj.version>
 
 		<!-- Spring Boot版本 -->
 		<spring-boot.version>2.6.4</spring-boot.version>
@@ -33,7 +31,7 @@
 		<!-- *************** 数据库相关 *************** -->
 
 		<!-- ORM: mybatis-plus版本 -->
-		<mybatis-plus.version>3.4.3</mybatis-plus.version>
+		<mybatis-plus.version>3.5.1</mybatis-plus.version>
 
 
 		<!-- *************** web相关 *************** -->
@@ -46,6 +44,12 @@
 
 		<!-- FastJSON -->
 		<fastjson.version>1.2.79</fastjson.version>
+
+
+		<!-- *************** 其他 *************** -->
+
+		<!-- Lombok -->
+		<lombok.version>1.18.22</lombok.version>
 	</properties>
 
 	<dependencyManagement>
@@ -133,6 +137,15 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
+			</dependency>
+
+
+			<!-- *************** 其它 *************** -->
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
