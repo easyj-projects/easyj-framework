@@ -9,7 +9,8 @@
 		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
 
-	<artifactId>easyj-framework-test</artifactId>
+	<artifactId>test</artifactId>
+	<description>仅用来测试当前框架。</description>
 
 	<dependencies>
 		<!-- EasyJ Starters -->
