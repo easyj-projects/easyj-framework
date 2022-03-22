@@ -15,7 +15,7 @@
 		<!-- *************** 基础框架 *************** -->
 
 		<!-- EasyJ版本 -->
-		<easyj.version>0.3.6</easyj.version>
+		<easyj.version>0.3.7</easyj.version>
 
 		<!-- Spring Boot版本 -->
 		<spring-boot.version>2.6.4</spring-boot.version>
