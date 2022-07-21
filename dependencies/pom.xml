@@ -15,23 +15,23 @@
 		<!-- *************** 基础框架 *************** -->
 
 		<!-- EasyJ版本 -->
-		<easyj.version>0.3.7</easyj.version>
+		<easyj.version>0.7.4</easyj.version>
 
 		<!-- Spring Boot版本 -->
-		<spring-boot.version>2.6.4</spring-boot.version>
+		<spring-boot.version>2.7.1</spring-boot.version>
 		<!-- Spring Cloud版本 -->
-		<spring-cloud.version>2021.0.1</spring-cloud.version>
+		<spring-cloud.version>2021.0.3</spring-cloud.version>
 
 		<!-- Spring Cloud Alibaba版本 -->
 		<spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
 		<!-- Seata版本-->
-		<seata.version>1.4.2</seata.version>
+		<seata.version>1.5.2</seata.version>
 
 
 		<!-- *************** 数据库相关 *************** -->
 
 		<!-- ORM: mybatis-plus版本 -->
-		<mybatis-plus.version>3.5.1</mybatis-plus.version>
+		<mybatis-plus.version>3.5.2</mybatis-plus.version>
 
 
 		<!-- *************** web相关 *************** -->
@@ -43,13 +43,13 @@
 		<!-- *************** 工具相关 *************** -->
 
 		<!-- FastJSON -->
-		<fastjson.version>1.2.79</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 
 
 		<!-- *************** 其他 *************** -->
 
 		<!-- Lombok -->
-		<lombok.version>1.18.22</lombok.version>
+		<lombok.version>1.18.24</lombok.version>
 	</properties>
 
 	<dependencyManagement>
