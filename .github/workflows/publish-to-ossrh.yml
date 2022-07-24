@@ -1,12 +1,12 @@
-name: "Publish To OSS"
+name: "Publish To OSSRH"
 
 on:
   push:
-    branches: [ develop, 0.*.*, 1.*.*, 2.*.* ]
+    branches: [ develop, "*.*.*" ]
 
 jobs:
   publish:
-    name: "Publish To OSS"
+    name: "Publish To OSSRH"
     runs-on: ubuntu-latest
     steps:
       # step 1
@@ -24,14 +24,10 @@ jobs:
           server-password: OSSRH_PASSWORD
 
       # step 3
-      - name: "Import GPG-SECRET-KEY"
-        run: |
-          cat <(echo -e "${{ secrets.GPG_SECRET_KEY }}") | gpg --batch --import
-          gpg --list-secret-keys --keyid-format LONG
-
-      # step 4
-      - name: "Package and Publish-To-OSS"
+      - name: "Import GPG-SECRET-KEY, Package and Publish-To-OSSRH"
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-        run: mvn -T 4C clean deploy -Ppublish-auto -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} --batch-mode -e -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+        run: |
+          cat <(echo -e "${{ secrets.GPG_SECRET_KEY }}") | gpg --batch --import;
+          mvn clean deploy -Ppublish-auto -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -e -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn;
